@@ -172,7 +172,7 @@ function Navbar() {
 
           <Disclosure.Panel className="sm:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <Disclosure.Button
+              {/* <Disclosure.Button
                 as="a"
                 className={classNames(
                   login
@@ -183,7 +183,34 @@ function Navbar() {
                 // aria-current={item.current ? 'page' : undefined}
               >
                 Profile
-              </Disclosure.Button>
+              </Disclosure.Button> */}
+              <Link
+                to="/"
+                className={classNames(
+                  'text-white hover:text-purple-900',
+                  'px-3 py-2 rounded-md text-md font-medium',
+                )}
+              >
+                Home
+              </Link>
+              <Link
+                to="/about"
+                className={classNames(
+                  'text-white hover:text-purple-900',
+                  'px-3 py-2 rounded-md text-md font-medium',
+                )}
+              >
+                About
+              </Link>
+              <Link
+                to="/contact"
+                className={classNames(
+                  'text-white hover:text-purple-900',
+                  'px-3 py-2 rounded-md text-md font-medium',
+                )}
+              >
+                Contact
+              </Link>
             </div>
           </Disclosure.Panel>
         </>
