@@ -36,7 +36,7 @@ function Navbar() {
                       alt="Workflow"
                     />
                     <img
-                      className="hidden lg:block h-8 w-auto rounded-md"
+                      className="hidden lg:block h-8  w-auto rounded-md"
                       src={logo}
                       alt="valuntera"
                     />
