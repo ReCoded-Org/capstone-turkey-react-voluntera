@@ -16,7 +16,7 @@ function Navbar() {
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex items-center justify-between h-16">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <div className="absolute inset-y-0 left-0 flex items-center md:hidden sm:absolute">
                 {/* Mobile menu button */}
                 <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
@@ -29,14 +29,14 @@ function Navbar() {
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start lg:items-center">
                 <Link to="/">
-                  <div className="flex-shrink-0 flex gap-2 items-center justify-between bg-purple-900 px-3 py-2 rounded-md">
-                    <img
+                  <div className="flex-shrink-0 hidden gap-2 items-center justify-between bg-purple-900 px-3 py-2 rounded-md md:flex lg:flex sm:hidden">
+                    {/* <img
                       className="block lg:hidden h-8 w-auto rounded-md"
                       src={logo}
-                      alt="Workflow"
-                    />
+                      alt="valuntera"
+                    /> */}
                     <img
-                      className="hidden lg:block h-8  w-auto rounded-md"
+                      className=" block h-8  w-auto rounded-md"
                       src={logo}
                       alt="valuntera"
                     />
@@ -45,7 +45,7 @@ function Navbar() {
                     </span>
                   </div>
                 </Link>
-                <div className="hidden sm:block sm:ml-6">
+                <div className="hidden lg:block md:block sm:hidden sm:ml-6">
                   <div className="flex items-center md:items-center space-x-4">
                     <Link
                       to="/"
@@ -73,6 +73,15 @@ function Navbar() {
                       )}
                     >
                       Contact
+                    </Link>
+                    <Link
+                      to="/project"
+                      className={classNames(
+                        'text-white hover:text-purple-900',
+                        'px-3 py-2 rounded-md text-md font-medium',
+                      )}
+                    >
+                      Project
                     </Link>
                   </div>
                 </div>
@@ -108,7 +117,7 @@ function Navbar() {
                     <Link to="/signup">
                       <button
                         type="button"
-                        className="text-white px-5 py-1 bg-purple-900 rounded-md flex items-center  font-semibold hover:text-gray-400"
+                        className="text-white px-5 py-2 bg-purple-900 rounded-md flex items-center  font-semibold hover:text-gray-400"
                       >
                         Sign up
                       </button>
@@ -170,7 +179,7 @@ function Navbar() {
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden">
+          <Disclosure.Panel className="sm:block block md:hidden lg:hidden ">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {/* <Disclosure.Button
                 as="a"
