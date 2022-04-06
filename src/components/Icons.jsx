@@ -1,4 +1,4 @@
-import github from '../assets/github.svg';
+import github from '../assets/images/github.svg';
 
 export default function Linkedin() {
   return (
