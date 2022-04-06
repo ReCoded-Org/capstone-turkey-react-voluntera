@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import logo from '../assets/logov.png';
+
+import logo from '../assets/images/logov.png';
 import Linkedin, { Facebook, Github } from './Icons';
 
 function Footer() {
