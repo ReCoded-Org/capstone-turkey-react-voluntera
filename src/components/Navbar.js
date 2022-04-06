@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom';
 import { Fragment } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
-import logo from '../assets/logov.png';
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
-}
+import { classNames } from '../utils';
+import logo from '../assets/images/logov.png';
+import { ABOUT_ROUTE, CONTACT_ROUTE, HOME_ROUTE } from '../routes';
+
 function Navbar() {
   const login = false;
 
@@ -28,7 +28,7 @@ function Navbar() {
                 </Disclosure.Button>
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start lg:items-center">
-                <Link to="/">
+                <Link to={HOME_ROUTE}>
                   <div className="flex-shrink-0 flex gap-2 items-center justify-between bg-purple-900 px-3 py-2 rounded-md">
                     <img
                       className="block lg:hidden h-8 w-auto rounded-md"
@@ -48,7 +48,7 @@ function Navbar() {
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex items-center md:items-center space-x-4">
                     <Link
-                      to="/"
+                      to={HOME_ROUTE}
                       className={classNames(
                         'text-white  hover:text-purple-900',
                         ' rounded-md text-md font-medium',
@@ -57,7 +57,7 @@ function Navbar() {
                       Home
                     </Link>
                     <Link
-                      to="/about"
+                      to={ABOUT_ROUTE}
                       className={classNames(
                         'text-white  hover:text-purple-900',
                         'px-3 py-2 rounded-md text-md font-medium',
@@ -66,7 +66,7 @@ function Navbar() {
                       About
                     </Link>
                     <Link
-                      to="/contact"
+                      to={CONTACT_ROUTE}
                       className={classNames(
                         'text-white hover:text-purple-900',
                         'px-3 py-2 rounded-md text-md font-medium',
@@ -78,13 +78,6 @@ function Navbar() {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                {/* <button
-                  type="button"
-                  className="bg-gray-800 p-1 rounded-full text-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                >
-                  <span className="sr-only">View notifications</span>
-                  <BellIcon className="h-6 w-6" aria-hidden="true" />
-                </button> */}
                 <input
                   type="text"
                   className="hidden rounded-full outline-none px-3 w-60 text-lg md:hidden sm:hidden lg:block bg-purple-600 border text-white"
@@ -172,20 +165,8 @@ function Navbar() {
 
           <Disclosure.Panel className="sm:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              {/* <Disclosure.Button
-                as="a"
-                className={classNames(
-                  login
-                    ? 'bg-gray-900 text-white'
-                    : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                  'block px-3 py-2 rounded-md text-base font-medium',
-                )}
-                // aria-current={item.current ? 'page' : undefined}
-              >
-                Profile
-              </Disclosure.Button> */}
               <Link
-                to="/"
+                to={HOME_ROUTE}
                 className={classNames(
                   'text-white hover:text-purple-900',
                   'px-3 py-2 rounded-md text-md font-medium',
@@ -194,7 +175,7 @@ function Navbar() {
                 Home
               </Link>
               <Link
-                to="/about"
+                to={ABOUT_ROUTE}
                 className={classNames(
                   'text-white hover:text-purple-900',
                   'px-3 py-2 rounded-md text-md font-medium',
@@ -203,7 +184,7 @@ function Navbar() {
                 About
               </Link>
               <Link
-                to="/contact"
+                to={CONTACT_ROUTE}
                 className={classNames(
                   'text-white hover:text-purple-900',
                   'px-3 py-2 rounded-md text-md font-medium',
@@ -220,36 +201,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
-//  <div className="bg-purple-500 h-16 flex">
-//       <div className="container m-auto flex items-center justify-between">
-//         <div className="flex items-center gap-3">
-//           {/* logo */}
-//           <div className="flex justify-around w-44 h-11 rounded-md items-center gap-2 bg-purple-800 p-3 m-1">
-//             <img src={logo} alt="valuntera" className="h-7 rounded" />
-//             <h1 className="text-2xl text-white font-semibold">Valuntera</h1>
-//           </div>
-//           {/* menu */}
-//           <ul className="flex gap-2 text-white font-semibold">
-//             <li className=" hover:border-b-2 mx-2 border-b-purple-500">Home</li>
-//             <li className=" hover:border-b-2 mx-2">Projects</li>
-//             <li className=" hover:border-b-2 mx-2">About</li>
-//             <li className=" hover:border-b-2 mx-2">Contact</li>
-//           </ul>
-//         </div>
-//         {/* login and search */}
-//         <div className="flex gap-2">
-//           <input
-//             type="text"
-//             className="rounded-full border bg-transparent px-3 py-1 text-white text-md w-72 outline-none placeholder-gray-300"
-//             placeholder="Search here"
-//           />
-//           <button
-//             className="text-white bg-purple-800 rounded-full font-semibold px-5 py-1 flex"
-//             type="button"
-//           >
-//             Sign up
-//           </button>
-//         </div>
-//       </div>
-//     </div>
