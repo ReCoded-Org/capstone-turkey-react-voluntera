@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import logo from '../assets/images/logov.png';
+import { ABOUT_ROUTE, CONTACT_ROUTE, HOME_ROUTE } from '../routes';
 import Linkedin, { Facebook, Github } from './Icons';
 
 function Footer() {
@@ -30,19 +31,19 @@ function Footer() {
         <div className="flex flex-col w-80 px-5 gap-1 sm:w-80 sm:px-5 ">
           <h1 className="text-white text-xl mb-4">MENU</h1>
           <Link
-            to="/"
+            to={HOME_ROUTE}
             className="text-white font-semibold hover:text-purple-900"
           >
             Home
           </Link>
           <Link
-            to="/about"
+            to={ABOUT_ROUTE}
             className="text-white font-semibold hover:text-purple-900"
           >
             About
           </Link>
           <Link
-            to="/contact"
+            to={CONTACT_ROUTE}
             className="text-white font-semibold hover:text-purple-900"
           >
             Contact
