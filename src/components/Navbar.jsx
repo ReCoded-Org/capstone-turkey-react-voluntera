@@ -5,7 +5,13 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline';
 
 import classNames from '../utils';
 import logo from '../assets/images/logov.png';
-import { ABOUT_ROUTE, CONTACT_ROUTE, HOME_ROUTE } from '../routes';
+import {
+  ABOUT_ROUTE,
+  CONTACT_ROUTE,
+  HOME_ROUTE,
+  PROJECT_ROUTE,
+  SIGN_UP_ROUTE,
+} from '../routes';
 
 function Navbar() {
   const login = false;
@@ -16,7 +22,7 @@ function Navbar() {
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex items-center justify-between h-16">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <div className="absolute inset-y-0 left-0 flex items-center md:absolute sm:absolute lg:hidden">
                 {/* Mobile menu button */}
                 <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
@@ -29,14 +35,9 @@ function Navbar() {
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start lg:items-center">
                 <Link to={HOME_ROUTE}>
-                  <div className="flex-shrink-0 flex gap-2 items-center justify-between bg-purple-900 px-3 py-2 rounded-md">
+                  <div className="flex-shrink-0 hidden gap-2 items-center justify-between bg-purple-900 px-3 py-2 rounded-md md:flex md:ml-16 lg:ml-0 lg:flex sm:hidden">
                     <img
-                      className="block lg:hidden h-8 w-auto rounded-md"
-                      src={logo}
-                      alt="Workflow"
-                    />
-                    <img
-                      className="hidden lg:block h-8 w-auto rounded-md"
+                      className=" block h-8  w-auto rounded-md"
                       src={logo}
                       alt="valuntera"
                     />
@@ -45,7 +46,7 @@ function Navbar() {
                     </span>
                   </div>
                 </Link>
-                <div className="hidden sm:block sm:ml-6">
+                <div className="hidden lg:block md:hidden sm:hidden sm:ml-6">
                   <div className="flex items-center md:items-center space-x-4">
                     <Link
                       to={HOME_ROUTE}
@@ -74,6 +75,15 @@ function Navbar() {
                     >
                       Contact
                     </Link>
+                    <Link
+                      to={PROJECT_ROUTE}
+                      className={classNames(
+                        'text-white hover:text-purple-900',
+                        'px-3 py-2 rounded-md text-md font-medium',
+                      )}
+                    >
+                      Project
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -98,10 +108,10 @@ function Navbar() {
                       </Menu.Button>
                     </div>
                   ) : (
-                    <Link to="/signup">
+                    <Link to={SIGN_UP_ROUTE}>
                       <button
                         type="button"
-                        className="text-white px-5 py-1 bg-purple-900 rounded-md flex items-center  font-semibold hover:text-gray-400"
+                        className="text-white px-5 py-2 bg-purple-900 rounded-md flex items-center  font-semibold hover:text-gray-400"
                       >
                         Sign up
                       </button>
@@ -163,7 +173,7 @@ function Navbar() {
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden">
+          <Disclosure.Panel className="sm:block block md:block lg:hidden ">
             <div className="px-2 pt-2 pb-3 space-y-1">
               <Link
                 to={HOME_ROUTE}
@@ -192,6 +202,11 @@ function Navbar() {
               >
                 Contact
               </Link>
+              <input
+                type="text"
+                className="block rounded-full outline-none px-3 w-60 text-lg md:block sm:block lg:hidden bg-purple-600 border text-white"
+                placeholder="Search here"
+              />
             </div>
           </Disclosure.Panel>
         </>
