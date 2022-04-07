@@ -1,5 +1,6 @@
-import './AboutPage.css';
+import './About.css';
 import TechSection from '../../components/TechSection';
+import TeamSection from '../../components/TeamSection';
 
 function AboutPage() {
   return (
@@ -21,6 +22,7 @@ function AboutPage() {
         </button>
       </div>
       <TechSection />
+      <TeamSection />
     </>
   );
 }

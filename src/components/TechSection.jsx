@@ -19,9 +19,9 @@ function TechSection() {
   ];
 
   return (
-    <div className="text-center p-4 pt-12">
+    <div className="text-center p-4 py-12">
       <h2 className="text-4xl text-[#026FC2] py-6">Technologies We Used</h2>
-      <div className="flex flex-row justify-around flex-wrap">
+      <div className="flex flex-row justify-center flex-wrap">
         {techInfo.map((tech) => {
           return (
             <TechCard key={tech.name} name={tech.name} photo={tech.photo} />
