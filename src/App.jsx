@@ -7,6 +7,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
 import SignUp from './pages/Signup';
+import Footer from './components/Footer/Footer';
 import {
   ABOUT_ROUTE,
   CONTACT_ROUTE,
@@ -28,6 +29,7 @@ function App() {
           <Route path={NOT_FOUND_ROUTE} element={<SignUp />} />
         </Routes>
       </Router>
+      <Footer />
     </div>
   );
 }
