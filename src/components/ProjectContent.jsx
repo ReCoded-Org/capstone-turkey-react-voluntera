@@ -1,11 +1,12 @@
-import projectimg from '../assets/project.jpg';
+import PropTypes from 'prop-types';
+// import projectimg from '../assets/images/project.jpg';
 
-function ProjectContent() {
+function ProjectContent({ projectimg }) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8  p-3">
       <div className="flex flex-col p-3 ">
         <img
-          src={projectimg}
+          src={`${projectimg}`}
           alt="project"
           className="sm:h-48 sm:w-auto md:w-auto lg:w-80  rounded"
         />
@@ -18,7 +19,7 @@ function ProjectContent() {
         <span className="text-center sm:text-center md:text-left lg:text-left pb-4">
           Part-Time
         </span>
-        <p className="flex flex-col items-center lg:flex md:flex">
+        <div className="flex flex-col items-center lg:flex md:flex">
           You can load project details such as the project name, classification,
           and type, as well as the start and end dates, to existing and new
           projects. You load project details to existing projects by using a
@@ -41,7 +42,7 @@ function ProjectContent() {
               Apply
             </button>
           </div>
-        </p>
+        </div>
       </div>
       <div className="md:flex md:flex-col md:justify-center p-3 md:pt-28 ">
         <p>
@@ -56,5 +57,9 @@ function ProjectContent() {
     </div>
   );
 }
+
+ProjectContent.propTypes = {
+  projectimg: PropTypes.string.isRequired,
+};
 
 export default ProjectContent;
