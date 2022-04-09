@@ -1,6 +1,3 @@
-import PropTypes from 'prop-types';
-// import projectimg from '../assets/images/project.jpg';
-
 function ProjectContent({ project }) {
   return project.map((p) => {
     return (
@@ -55,9 +52,5 @@ function ProjectContent({ project }) {
     );
   });
 }
-
-ProjectContent.propTypes = {
-  projectimg: PropTypes.string.isRequired,
-};
 
 export default ProjectContent;
