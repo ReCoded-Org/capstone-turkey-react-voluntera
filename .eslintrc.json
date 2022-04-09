@@ -30,6 +30,6 @@
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "testing-library/prefer-screen-queries":["off"],
         "prettier/prettier": ["error",{"endOfLine": "auto"}],
-        "no-restricted-exports": ["error", { "restrictedNamedExports": ["default"] }]
+        "no-restricted-exports": ["off", { "restrictedNamedExports": ["default"] }]
     }
 }
