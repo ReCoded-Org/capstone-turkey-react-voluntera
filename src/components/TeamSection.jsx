@@ -2,7 +2,6 @@ import teamMembers from '../team.json';
 import TeamCard from './TeamCard';
 
 function TeamSection() {
-  console.log(teamMembers);
   return (
     <div className="text-center p-10 shadow-inner">
       <h2 className="text-4xl  py-6">Team</h2>
