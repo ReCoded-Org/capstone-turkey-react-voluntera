@@ -1,6 +1,7 @@
 import './About.css';
 import TechSection from '../../components/TechSection';
 import TeamSection from '../../components/TeamSection';
+import Newsletter from '../../components/Newsletter';
 
 function AboutPage() {
   return (
@@ -16,13 +17,14 @@ function AboutPage() {
         </p>
         <button
           type="button"
-          className="bg-[#573C9B] p-3 rounded px-5 text-white get-started-button"
+          className="bg-[#573C9B] p-3 rounded px-5 text-white drop-shadow-xl"
         >
           Get Started
         </button>
       </div>
       <TechSection />
       <TeamSection />
+      <Newsletter />
     </>
   );
 }

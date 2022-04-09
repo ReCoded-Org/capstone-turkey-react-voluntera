@@ -4,9 +4,9 @@ import TeamCard from './TeamCard';
 function TeamSection() {
   console.log(teamMembers);
   return (
-    <div className="text-center p-4 pt-12 shadow-inner">
-      <h2 className="text-4xl text-[#026FC2] py-6">Team</h2>
-      <div className="flex flex-row md:justify-start  justify-center flex-wrap">
+    <div className="text-center p-10 shadow-inner">
+      <h2 className="text-4xl  py-6">Team</h2>
+      <div className="flex flex-row   justify-center flex-wrap">
         {teamMembers.map((member) => {
           return (
             <TeamCard

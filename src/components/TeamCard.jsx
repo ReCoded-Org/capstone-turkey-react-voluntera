@@ -3,8 +3,8 @@ import { BsGithub, BsLinkedin } from 'react-icons/bs';
 
 function TeamCard({ name, github, linkedin }) {
   return (
-    <div className="md:basis-1/3  p-4 text-center flex flex-col align-center items-center">
-      <p>{name}</p>
+    <div className="basis-1/3  p-4 text-center flex flex-col align-center items-center">
+      <p className="text-lg">{name}</p>
       <div className="flex flex-row">
         <a href={github} rel="noopener noreferrer" className="p-2">
           <BsGithub size={30} />
