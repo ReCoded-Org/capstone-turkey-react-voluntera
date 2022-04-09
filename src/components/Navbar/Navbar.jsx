@@ -4,7 +4,7 @@ import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 
 import classNames from '../../utils';
-import logo from '../assets/images/logov.png';
+import logo from '../../assets/images/logov.png';
 import {
   ABOUT_ROUTE,
   CONTACT_ROUTE,
