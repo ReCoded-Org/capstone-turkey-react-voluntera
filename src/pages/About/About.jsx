@@ -3,7 +3,7 @@ import TechSection from '../../components/TechSection';
 import TeamSection from '../../components/TeamSection';
 import Newsletter from '../../components/Newsletter';
 
-function AboutPage() {
+function About() {
   return (
     <>
       <div className="flex flex-col justify-around items-center about-hero bg-cover p-4 pb-44">
@@ -29,4 +29,4 @@ function AboutPage() {
   );
 }
 
-export default AboutPage;
+export default About;
