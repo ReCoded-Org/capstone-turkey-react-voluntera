@@ -3,11 +3,22 @@ import logo from '../../assets/images/sign.png';
 export default function SingUp() {
   return (
     <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-      <img className="w-full" src={logo} alt="Display" />
+      <img className="w-50%" src={logo} alt="Display" />
       <div className="max-w-md w-full space-y-8">
+        <h2 className="text-4xl text-indigo-600">Sign In</h2>
         <form className="mt-8 space-y-6" action="#" method="POST">
-          <input type="hidden" name="remember" defaultValue="true" />
-          <h2 style={{ color: '#026FC2', marginBottom: '10px' }}>Sign In</h2>
+          <div className="mx-auto px-2 sm:px-8 lg:px-2 flex flex-col gap-10 justify-between sm:flex-col md:flex-col sm:flex">
+            <input
+              type="text"
+              className="bg-black-900 border-4 text-black"
+              placeholder="Username"
+            />
+            <input
+              type="text"
+              className="bg-white-900 border-4 text-black"
+              placeholder="Password"
+            />
+          </div>
           <div className="rounded-md shadow-sm -space-y-px">
             <div>
               <label htmlFor="email-address" className="sr-only">
@@ -46,7 +57,6 @@ export default function SingUp() {
               </label>
             </div>
           </div>
-
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <input

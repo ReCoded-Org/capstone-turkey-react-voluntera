@@ -28,8 +28,8 @@ function App() {
           <Route path={LOGIN_ROUTE} element={<Login />} />
           <Route path={SIGN_UP_ROUTE} element={<SignUp />} />
         </Routes>
+        <Footer />
       </Router>
-      <Footer />
     </div>
   );
 }
