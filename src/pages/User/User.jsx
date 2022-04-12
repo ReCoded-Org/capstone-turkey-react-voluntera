@@ -65,9 +65,12 @@ function User() {
             {/* skills */}
             <p className="mt-3 flex flex-wrap gap-1">
               <strong className="text-lg text-blue-500 mr-2">SKILLS: </strong>
-              {skills.map((skill) => {
+              {skills.map((skill, index) => {
                 return (
-                  <span className="border-r-2 border-r-blue-400 pr-2 px-1">
+                  <span
+                    key={index}
+                    className="border-r-2 border-r-blue-400 pr-2 px-1"
+                  >
                     {skill}
                   </span>
                 );
