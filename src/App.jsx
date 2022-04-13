@@ -13,7 +13,7 @@ import {
   CONTACT_ROUTE,
   HOME_ROUTE,
   LOGIN_ROUTE,
-  NOT_FOUND_ROUTE,
+  SIGN_UP_ROUTE,
 } from './routes';
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
           <Route path={ABOUT_ROUTE} element={<About />} />
           <Route path={CONTACT_ROUTE} element={<Contact />} />
           <Route path={LOGIN_ROUTE} element={<Login />} />
-          <Route path={NOT_FOUND_ROUTE} element={<SignUp />} />
+          <Route path={SIGN_UP_ROUTE} element={<SignUp />} />
         </Routes>
         <Footer />
       </Router>
