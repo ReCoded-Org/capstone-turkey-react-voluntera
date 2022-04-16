@@ -5,7 +5,7 @@ import Newsletter from '../../components/Newsletter';
 
 function About() {
   return (
-    <>
+    <div>
       <div className="flex flex-col justify-around items-center about-hero bg-cover p-4 pb-44">
         <h1 className="text-6xl text-[#4192d1] font-[400] leading-[63px] text-center tracking-[-1px]">
           Voluntera
@@ -22,10 +22,12 @@ function About() {
           Get Started
         </button>
       </div>
-      <TechSection />
-      <TeamSection />
-      <Newsletter />
-    </>
+      <div className="px-24">
+        <TechSection />
+        <TeamSection />
+        <Newsletter />
+      </div>
+    </div>
   );
 }
 

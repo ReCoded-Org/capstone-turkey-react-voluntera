@@ -1,27 +1,58 @@
 [
   {
+    "id": "1",
     "name": "İrem Nur Umut",
+    "rol": "Contributer",
     "github": "https://github.com/iremumut",
-    "linkedin": "https://www.linkedin.com/in/irem-nur"
+    "linkedin": "https://www.linkedin.com/in/irem-nur",
+    "profileImage": "https://avatars.githubusercontent.com/u/82174470?v=4"
   },
   {
+    "id": "2",
     "name": "Mohammad Zamin Mirzad",
+    "rol": "Contributer",
     "github": "https://github.com/ZaminMirzad",
-    "linkedin": "https://www.linkedin.com/in/zaminmirzad"
+    "linkedin": "https://www.linkedin.com/in/zaminmirzad",
+    "profileImage": "https://avatars.githubusercontent.com/u/91832381?v=4"
   },
   {
+    "id": "3",
     "name": "Zahra'a Knass",
+    "rol": "Contributer",
     "github": "https://github.com/zahraa7",
-    "linkedin": "https://www.linkedin.com/in/zahraa-knass/"
+    "linkedin": "https://www.linkedin.com/in/zahraa-knass/",
+    "profileImage": "https://avatars.githubusercontent.com/u/6858960?v=4"
   },
   {
+    "id": "4",
     "name": "Gizem Deniz",
+    "rol": "Contributer",
     "github": "https://github.com/gizemcdeniz",
-    "linkedin": "https://www.linkedin.com/in/gizem-deniz/"
+    "linkedin": "https://www.linkedin.com/in/gizem-deniz/",
+    "profileImage": "https://avatars.githubusercontent.com/u/61707093?v=4"
   },
   {
+    "id": "5",
     "name": "Batuhan Avcı",
+    "rol": "Contributer",
     "github": "https://github.com/avcibatuhan",
-    "linkedin": "https://www.linkedin.com/in/batuhan-avci/"
+    "linkedin": "https://www.linkedin.com/in/batuhan-avci/",
+    "profileImage": "https://avatars.githubusercontent.com/u/43846788?v=4"
+  },
+  {
+    "id": "7",
+    "name": "Muhanned Noman",
+    "rol": "Lead Engineer",
+    "github": "https://github.com/MuhannedNoman",
+    "linkedin": "https://www.linkedin.com/in/",
+    "profileImage": "https://avatars.githubusercontent.com/u/40465727?v=4"
+  },
+  {
+    "id": "8",
+    "name": "Maher Alaqil",
+    "rol": "Supervisor & Reviewer",
+    "github": "https://github.com/maqalaqil",
+    "linkedin": "https://www.linkedin.com/in/",
+    "profileImage": "https://avatars.githubusercontent.com/u/18458259?v=4"
   }
 ]

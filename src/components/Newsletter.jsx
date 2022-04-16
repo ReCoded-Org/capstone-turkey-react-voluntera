@@ -5,7 +5,7 @@ function Newsletter() {
   const [email, setEmail] = useState('');
 
   return (
-    <div className="text-center p-10 shadow-inner flex flex-col justify-center items-center ">
+    <div className="text-center px-10 mb-10 shadow-inner flex flex-col justify-center items-center ">
       <h2 className="text-4xl text-[#0B0C0D] pt-6 pb-2">News & Updates</h2>
       <p className="pb-6">
         Enter your email below to get news and updates from us

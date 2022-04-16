@@ -18,7 +18,7 @@ import {
 
 function App() {
   return (
-    <div>
+    <div className="font-sans">
       <Router>
         <Navbar />
         <Routes>

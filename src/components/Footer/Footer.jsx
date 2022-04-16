@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 import logo from '../../assets/images/logov.png';
 import { ABOUT_ROUTE, CONTACT_ROUTE, HOME_ROUTE } from '../../routes';
-import Linkedin, { Facebook, Github } from '../Icons';
+import Linkedin, { Github } from '../Icons';
 
 function Footer() {
   return (
@@ -22,9 +22,33 @@ function Footer() {
             Copyright © Valuntera All rights reserved{' '}
           </p>
           <div className="flex gap-2">
-            <Linkedin />
-            <Facebook />
-            <Github />
+            <a
+              href="https://www.linkedin.com/school/re-coded/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <img
+                src="https://avatars.githubusercontent.com/u/35921230?s=200&v=4"
+                alt="recoded"
+                className="h-10 w-auto rounded-full"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/school/re-coded/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <Linkedin />
+            </a>
+
+            <a
+              href="https://github.com/ReCoded-Org/capstone-turkey-react-voluntera"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {' '}
+              <Github />
+            </a>
           </div>
         </div>
         {/* menu section */}
