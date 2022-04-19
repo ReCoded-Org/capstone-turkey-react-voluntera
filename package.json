@@ -5,20 +5,22 @@
   "dependencies": {
     "@headlessui/react": "^1.5.0",
     "@heroicons/react": "^1.0.6",
-    "@reduxjs/toolkit": "^1.5.1",
+    "@reduxjs/toolkit": "^1.8.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.26.1",
     "formik": "^2.2.9",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-bootstrap-icons": "^1.8.1",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
-    "react-redux": "^7.2.3",
+    "react-redux": "^7.2.8",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.0",
-    "react-test-renderer": "^17.0.2"
+    "react-test-renderer": "^17.0.2",
+    "redux": "^4.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -45,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "@redux-devtools/core": "^3.11.0",
     "autoprefixer": "^10.4.4",
     "eslint": "^8.11.0",
     "eslint-config-airbnb": "^19.0.4",

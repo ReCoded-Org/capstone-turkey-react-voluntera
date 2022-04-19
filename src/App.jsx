@@ -1,4 +1,3 @@
-import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar/Navbar';
@@ -18,7 +17,7 @@ import {
 
 function App() {
   return (
-    <div>
+    <div className="font-sans">
       <Router>
         <Navbar />
         <Routes>
