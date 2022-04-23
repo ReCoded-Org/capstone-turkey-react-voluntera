@@ -17,23 +17,24 @@ import {
   SIGN_UP_ROUTE,
 } from './routes';
 import ProjectContent from './components/ProjectContent';
+import AddNewProjectModal from './components/AddNewProjectModal';
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path={HOME_ROUTE} element={<Home />} />
-        <Route path={ABOUT_ROUTE} element={<About />} />
-        <Route path={CONTACT_ROUTE} element={<Contact />} />
-        <Route path={PROJECT_ROUTE} element={<Project />}>
-          <Route path=":pId" element={ProjectContent} />
-        </Route>
-        <Route path={LOGIN_ROUTE} element={<Login />} />
-        <Route path={SIGN_UP_ROUTE} element={<SignUp />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <div className="font-sans">
+      <Router>
+        <Navbar />
+        <AddNewProjectModal />
+        <Routes>
+          <Route path={HOME_ROUTE} element={<Home />} />
+          <Route path={ABOUT_ROUTE} element={<About />} />
+          <Route path={CONTACT_ROUTE} element={<Contact />} />
+          <Route path={LOGIN_ROUTE} element={<Login />} />
+          <Route path={SIGN_UP_ROUTE} element={<SignUp />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </div>
   );
 }
 
