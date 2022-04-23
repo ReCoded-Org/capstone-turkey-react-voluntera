@@ -67,18 +67,21 @@ function ApplicantList({ applicants }) {
       <hr className="h-0.5 bg-gray-400 rounded-full my-2 " />
       {applicants.map((i) => {
         return (
-          <div key={i.id}>
+          /* eslint no-underscore-dangle: 0 */
+          <div key={i._id}>
             <div className="grid lg:grid-cols-3 items-center  pb-2 px-2 md:grid-cols-3  grid-cols-1  md:justify-items-center justify-items-center lg:justify-items-start  gap-5">
               {/* profile */}
               <div className="lg:h-20 lg:w-20 md:h-20 md:w-20 h-32 w-32 rounded-full bg-gray-300" />
               {/* Name */}
               <div className="flex flex-col">
                 <span className="text-gray-500 text-lg">{i.name}</span>
-                <span className="text-gray-400 text-sm">{i.position}</span>
+                <span className="text-gray-400 text-sm">
+                  {i.date.slice(0, 7)}
+                </span>
               </div>
               {/* Status */}
               <div className="lg:justify-self-end md:justify-self-end pr-5">
-                {appStatus(i.applicationStatus)}
+                {appStatus(i.status)}
               </div>
             </div>
             <hr className="h-0.5 bg-gray-400 rounded-full my-2" />
@@ -90,7 +93,10 @@ function ApplicantList({ applicants }) {
 }
 
 ApplicantList.propTypes = {
-  applicants: PropTypes.shape.isRequired,
+  applicants: PropTypes.instanceOf(Array),
+};
+ApplicantList.defaultProps = {
+  applicants: [],
 };
 
 export default ApplicantList;

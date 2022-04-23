@@ -84,6 +84,13 @@ function Navbar() {
                     >
                       Project
                     </Link>
+                    <button
+                      type="button"
+                      className="text-white hover:text-purple-900 px-3 py-2 rounded-md text-md font-medium"
+                      data-modal-toggle="defaultModal"
+                    >
+                      add new project
+                    </button>
                   </div>
                 </div>
               </div>
