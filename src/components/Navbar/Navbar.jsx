@@ -35,13 +35,13 @@ function Navbar() {
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start lg:items-center">
                 <Link to={HOME_ROUTE}>
-                  <div className="flex-shrink-0 hidden gap-2 items-center justify-between bg-purple-900 px-3 py-2 rounded-md md:flex md:ml-16 lg:ml-0 lg:flex sm:hidden">
+                  <div className="flex-shrink-0 hidden gap-2 items-center justify-between bg-purple-900 px-3 py-2 rounded-md md:flex md:ml-11 lg:ml-0 lg:flex sm:hidden">
                     <img
-                      className=" block h-8  w-auto rounded-md"
+                      className=" block h-8  w-auto rounded-md md:h-6"
                       src={logo}
                       alt="valuntera"
                     />
-                    <span className="text-2xl text-white font-semibold">
+                    <span className="text-2xl text-white font-semibold md:text-xl">
                       Valuntera
                     </span>
                   </div>
@@ -111,7 +111,7 @@ function Navbar() {
                     <Link to={SIGN_UP_ROUTE}>
                       <button
                         type="button"
-                        className="text-white px-5 py-2 bg-purple-900 rounded-md flex items-center  font-semibold hover:text-gray-400"
+                        className="text-white px-5 py-2 bg-purple-900 rounded-md flex items-center  font-semibold hover:text-white hover:bg-purple-800"
                       >
                         Sign up
                       </button>
