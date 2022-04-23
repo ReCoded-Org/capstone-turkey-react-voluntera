@@ -14,12 +14,14 @@ import {
   LOGIN_ROUTE,
   SIGN_UP_ROUTE,
 } from './routes';
+import AddNewProjectModal from './components/AddNewProjectModal';
 
 function App() {
   return (
     <div className="font-sans">
       <Router>
         <Navbar />
+        <AddNewProjectModal />
         <Routes>
           <Route path={HOME_ROUTE} element={<Home />} />
           <Route path={ABOUT_ROUTE} element={<About />} />
