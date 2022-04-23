@@ -120,7 +120,7 @@ function Navbar() {
                         type="button"
                         className="text-white px-5 py-2 bg-purple-900 rounded-md flex items-center  font-semibold hover:text-white hover:bg-purple-800"
                       >
-                        Sign up
+                        Login
                       </button>
                     </Link>
                   )}

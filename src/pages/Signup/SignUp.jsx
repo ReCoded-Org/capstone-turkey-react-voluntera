@@ -1,11 +1,13 @@
+import { Link } from 'react-router-dom';
 import logo from '../../assets/images/sign.png';
+import { LOGIN_ROUTE } from '../../routes';
 
 export default function SingUp() {
   return (
     <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <img className="w-50%" src={logo} alt="Display" />
       <div className="max-w-md w-full space-y-8">
-        <h2 className="text-4xl text-indigo-600">Sign In</h2>
+        <h2 className="text-4xl text-indigo-600">Sign Up</h2>
         <form className="mt-8 space-y-6" action="#" method="POST">
           <div className="mx-auto px-2 sm:px-8 lg:px-2 flex flex-col gap-10 justify-between sm:flex-col md:flex-col sm:flex">
             <input
@@ -79,6 +81,14 @@ export default function SingUp() {
                 Forgot your password?
               </a>
             </div>
+          </div>
+          <div className="text-sm">
+            <Link
+              to={LOGIN_ROUTE}
+              className="font-medium text-indigo-600 hover:text-indigo-500"
+            >
+              Dont have an account?
+            </Link>
           </div>
 
           <div className="flex items-center justify-between">

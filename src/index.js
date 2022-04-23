@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 
 import './index.css';
 import 'flowbite';
+import 'remixicon/fonts/remixicon.css';
 import App from './App';
 import store from './redux/store/store';
 
