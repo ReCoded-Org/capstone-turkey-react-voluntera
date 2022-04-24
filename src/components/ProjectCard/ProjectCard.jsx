@@ -10,6 +10,13 @@ function ProjectCard({ projectName, field, deadline }) {
           {' '}
           {projectName}{' '}
         </h2>
+        <button 
+        type="button"  
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded "
+        >
+          {' '}
+          Apply{' '}
+        </button>
         <div id="FieldAndDeadlineDivs">
           <div
             className={`text-sm ${
