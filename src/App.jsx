@@ -11,13 +11,14 @@ import Footer from './components/Footer/Footer';
 import {
   ABOUT_ROUTE,
   CONTACT_ROUTE,
+  FAQS_ROUTE,
   HOME_ROUTE,
   LOGIN_ROUTE,
   PROJECT_ROUTE,
   SIGN_UP_ROUTE,
 } from './routes';
-import ProjectContent from './components/ProjectContent';
 import AddNewProjectModal from './components/AddNewProjectModal';
+import FAQ from './pages/FAQ';
 
 function App() {
   return (
@@ -30,7 +31,9 @@ function App() {
           <Route path={ABOUT_ROUTE} element={<About />} />
           <Route path={CONTACT_ROUTE} element={<Contact />} />
           <Route path={LOGIN_ROUTE} element={<Login />} />
+          <Route path={PROJECT_ROUTE} element={<Project />} />
           <Route path={SIGN_UP_ROUTE} element={<SignUp />} />
+          <Route path={FAQS_ROUTE} element={<FAQ />} />
         </Routes>
         <Footer />
       </Router>
