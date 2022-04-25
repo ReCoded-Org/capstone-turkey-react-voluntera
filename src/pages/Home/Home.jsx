@@ -3,9 +3,13 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import { getProjects } from '../../redux/slices/projectsSlice';
+import loader from '../../assets/images/ripple.svg';
+
+import Contact from '../Contact';
+import HomeHero from '../../components/HomeHero';
 
 export default function Home() {
-  const projects = useSelector((state) => state.projects.list);
+  const projects = useSelector((state) => state.projects);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -13,34 +17,37 @@ export default function Home() {
   }, [dispatch]);
 
   return (
-    <div className="py-10 px-16">
-      <h1 className="text-3xl text-blue-500 px-16">Available Projects</h1>
-
-      <div className="px-16 flex gap-3 text-blue-500 mt-4 font-bold">
-        <button
-          type="button"
-          className="bg-blue-700 text-white px-3 py-2 rounded-md font-bold"
-        >
-          All Projects
-        </button>
-        <button type="button" onClick={() => dispatch(getProjects())}>
-          Recent Projects
-        </button>
-        <button type="button">Social Events</button>
-        <button type="button">some filter</button>
-        <button type="button">some filter</button>
-      </div>
-      <div className="flex gap-5 justify-center flex-wrap my-5 ">
-        {projects?.map((data) => (
-          <ProjectCard
-            /* eslint no-underscore-dangle: 0 */
-            key={data._id}
-            id={data._id}
-            projectName={data.title}
-            field={data.type}
-            deadline={data.date.slice(0, 7)}
-          />
-        ))}
+    <div>
+      <HomeHero />
+      <div className="py-10 lg:px-8 xl:px-8 ">
+        <div className="px-8 flex gap-3 text-blue-500 mt-4 font-bold">
+          <span className="border rounded-full px-3 border-blue-500 hover:text-white hover:bg-blue-500 cursor-pointer">
+            All Projects
+          </span>
+          <span className="border rounded-full px-3 border-blue-500 hover:text-white hover:bg-blue-500 cursor-pointer focus:bg-blue-500 focus:text-white">
+            Recent Projects
+          </span>
+        </div>
+        <div className="flex gap-5 justify-center flex-wrap my-5 py-5 ">
+          {projects.status === 'loading' ? (
+            <div>
+              <img src={loader} alt="loader" />
+            </div>
+          ) : (
+            projects?.list?.map((data) => (
+              <ProjectCard
+                /* eslint no-underscore-dangle: 0 */
+                key={data._id}
+                id={data._id}
+                projectName={data.title}
+                field={data.type}
+                deadline={data.date.slice(0, 7)}
+              />
+            ))
+          )}
+        </div>
+        <hr />
+        <Contact />
       </div>
     </div>
   );
