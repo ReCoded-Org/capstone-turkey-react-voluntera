@@ -6,6 +6,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
 import SignUp from './pages/Signup';
+import Posts from './pages/Post';
 import Project from './pages/Project/Project';
 import Footer from './components/Footer/Footer';
 import {
@@ -14,6 +15,7 @@ import {
   FAQS_ROUTE,
   HOME_ROUTE,
   LOGIN_ROUTE,
+  POSTS_ROUTE,
   PROJECT_ROUTE,
   SIGN_UP_ROUTE,
 } from './routes';
@@ -22,7 +24,7 @@ import FAQ from './pages/FAQ';
 
 function App() {
   return (
-    <div className="font-sans">
+    <div className="font-sans bg-gray-100">
       <Router>
         <Navbar />
         <AddNewProjectModal />
@@ -33,6 +35,7 @@ function App() {
           <Route path={LOGIN_ROUTE} element={<Login />} />
           <Route path={PROJECT_ROUTE} element={<Project />} />
           <Route path={SIGN_UP_ROUTE} element={<SignUp />} />
+          <Route path={POSTS_ROUTE} element={<Posts />} />
           <Route path={FAQS_ROUTE} element={<FAQ />} />
         </Routes>
         <Footer />
