@@ -48,106 +48,106 @@ export default function AddNewProjectModal() {
           <div className="p-6 space-y-6">
             <form>
               <div className="relative z-0 mb-6 w-full group">
-                <input
-                  type="text"
-                  name="title"
-                  className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                  placeholder=" "
-                  required
-                  onChange={handleChange}
-                />
                 <label
                   htmlFor="title"
                   className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
+                  <input
+                    type="text"
+                    name="title"
+                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" "
+                    required
+                    onChange={handleChange}
+                  />
                   Title
                 </label>
               </div>
               <div className="grid xl:grid-cols-2 xl:gap-6 mb-4">
                 <div className="relative z-0 mb-6 w-full group">
-                  <input
-                    type="text"
-                    name="type"
-                    id="type"
-                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                    placeholder=""
-                    required
-                    onChange={handleChange}
-                  />
                   <label
                     htmlFor="type"
                     className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
+                    <input
+                      type="text"
+                      name="type"
+                      id="type"
+                      className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                      placeholder=""
+                      required
+                      onChange={handleChange}
+                    />
                     Timing / Shift
                   </label>
                 </div>
                 <div className="flex items-center">
-                  <input
-                    id="isOpen"
-                    aria-describedby="isOpen"
-                    type="checkbox"
-                    className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                    name="isOpen"
-                    onChange={handleChange}
-                    value={isOpen}
-                  />
                   <label
                     htmlFor="isOpen"
                     className="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300"
                   >
+                    <input
+                      id="isOpen"
+                      aria-describedby="isOpen"
+                      type="checkbox"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                      name="isOpen"
+                      onChange={handleChange}
+                      value={isOpen}
+                    />
                     Is Open?
                   </label>
                 </div>
               </div>
               <div className="relative z-0 mb-6 w-full group">
-                <input
-                  type="text"
-                  name="necessarySkills"
-                  id="necessarySkills"
-                  className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                  placeholder=" "
-                  required
-                  onChange={handleChange}
-                />
                 <label
                   htmlFor="necessarySkills"
                   className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
+                  <input
+                    type="text"
+                    name="necessarySkills"
+                    id="necessarySkills"
+                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" "
+                    required
+                    onChange={handleChange}
+                  />
                   Skills
                 </label>
               </div>
               <div className="grid xl:grid-cols-2 xl:gap-6">
                 <div className="relative z-0 mb-6 w-full group">
-                  <input
-                    type="text"
-                    name="address"
-                    id="address"
-                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                    placeholder=" "
-                    required
-                    onChange={handleChange}
-                  />
                   <label
                     htmlFor="address"
                     className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
+                    <input
+                      type="text"
+                      name="address"
+                      id="address"
+                      className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                      placeholder=" "
+                      required
+                      onChange={handleChange}
+                    />
                     Location
                   </label>
                 </div>
                 <div className="relative z-0 mb-6 w-full group">
-                  <input
-                    type="date"
-                    name="date"
-                    id="date"
-                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                    placeholder=" "
-                    required
-                    onChange={handleChange}
-                  />
                   <label
                     htmlFor="date"
                     className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
+                    <input
+                      type="date"
+                      name="date"
+                      id="date"
+                      className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                      placeholder=" "
+                      required
+                      onChange={handleChange}
+                    />
                     Date
                   </label>
                 </div>

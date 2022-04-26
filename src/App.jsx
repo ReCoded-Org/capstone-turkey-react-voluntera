@@ -6,7 +6,6 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
 import SignUp from './pages/Signup';
-import Project from './pages/Project/Project';
 import Footer from './components/Footer/Footer';
 import {
   ABOUT_ROUTE,
@@ -14,7 +13,6 @@ import {
   FAQS_ROUTE,
   HOME_ROUTE,
   LOGIN_ROUTE,
-  PROJECT_ROUTE,
   SIGN_UP_ROUTE,
 } from './routes';
 import AddNewProjectModal from './components/AddNewProjectModal';

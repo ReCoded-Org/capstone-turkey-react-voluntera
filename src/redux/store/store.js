@@ -1,9 +1,12 @@
+import { configureStore } from '@reduxjs/toolkit';
+import signupVolReducer from '../slices/signUpSlice';
+import signupOrgReducer from '../slices/signUpOrgSlice';
 import projectsReducer from '../slices/projectsSlice';
-
-const { configureStore } = require('@reduxjs/toolkit');
 
 const store = configureStore({
   reducer: {
+    signupVolunteer: signupVolReducer,
+    signupOrganization: signupOrgReducer,
     projects: projectsReducer,
   },
 });
