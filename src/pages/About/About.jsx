@@ -1,9 +1,13 @@
+import { useNavigate } from 'react-router-dom';
+
 import './About.css';
 import TechSection from '../../components/TechSection';
 import TeamSection from '../../components/TeamSection';
 import Newsletter from '../../components/Newsletter';
+import { SIGN_UP_ROUTE } from '../../routes';
 
 function About() {
+  const navigate = useNavigate();
   return (
     <div>
       <div className="flex flex-col justify-around items-center about-hero bg-cover p-4 pb-44">
@@ -18,6 +22,7 @@ function About() {
         <button
           type="button"
           className="bg-[#573C9B] p-3 rounded px-5 text-white drop-shadow-xl"
+          onClick={() => navigate(SIGN_UP_ROUTE)}
         >
           Get Started
         </button>

@@ -1,7 +1,9 @@
-// import './ProjectCard.css';
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
+import { PROJECT_ROUTE } from '../../routes';
 
-function ProjectCard({ projectName, field, deadline }) {
+function ProjectCard({ projectName, field, deadline, id }) {
+  const navigate = useNavigate();
   return (
     <div className="max-w-xs bg-white rounded-lg border border-gray-200 shadow-xl ">
       <img
@@ -16,10 +18,9 @@ function ProjectCard({ projectName, field, deadline }) {
         </h5>
         <p className="mb-3 font-normal text-gray-700 ">{field}</p>
         <div className="flex justify-between items-end">
-          <a
-            href="http://www.w3.org/2000/svg"
-            target="_blank"
-            rel="noreferrer"
+          <button
+            onClick={() => navigate(`${PROJECT_ROUTE}${id}`)}
+            type="button"
             className="inline-flex items-center py-2 px-4 text-sm font-medium text-center text-white bg-blue-700 rounded-md hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Apply
@@ -35,7 +36,7 @@ function ProjectCard({ projectName, field, deadline }) {
                 clipRule="evenodd"
               />
             </svg>
-          </a>
+          </button>
           <span className="text-slate-500">Deadline: {deadline}</span>
         </div>
       </div>
@@ -49,10 +50,12 @@ ProjectCard.propTypes = {
   projectName: PropTypes.string,
   field: PropTypes.string,
   deadline: PropTypes.string,
+  id: PropTypes.string,
 };
 
 ProjectCard.defaultProps = {
   projectName: 'Name',
   field: 'Field',
   deadline: 'Deadline',
+  id: '',
 };

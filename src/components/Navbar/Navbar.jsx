@@ -84,6 +84,13 @@ function Navbar() {
                     >
                       Project
                     </Link>
+                    <button
+                      type="button"
+                      className="text-white hover:text-purple-900 px-3 py-2 rounded-md text-md font-medium"
+                      data-modal-toggle="defaultModal"
+                    >
+                      add new project
+                    </button>
                   </div>
                 </div>
               </div>
@@ -113,7 +120,7 @@ function Navbar() {
                         type="button"
                         className="text-white px-5 py-2 bg-purple-900 rounded-md flex items-center  font-semibold hover:text-white hover:bg-purple-800"
                       >
-                        Sign up
+                        Login
                       </button>
                     </Link>
                   )}

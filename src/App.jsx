@@ -6,20 +6,25 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
 import SignUp from './pages/Signup';
+import Project from './pages/Project/Project';
 import Footer from './components/Footer/Footer';
 import {
   ABOUT_ROUTE,
   CONTACT_ROUTE,
   HOME_ROUTE,
   LOGIN_ROUTE,
+  PROJECT_ROUTE,
   SIGN_UP_ROUTE,
 } from './routes';
+import ProjectContent from './components/ProjectContent';
+import AddNewProjectModal from './components/AddNewProjectModal';
 
 function App() {
   return (
     <div className="font-sans">
       <Router>
         <Navbar />
+        <AddNewProjectModal />
         <Routes>
           <Route path={HOME_ROUTE} element={<Home />} />
           <Route path={ABOUT_ROUTE} element={<About />} />
