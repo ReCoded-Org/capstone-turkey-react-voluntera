@@ -8,7 +8,6 @@ function Project() {
   const project = useSelector((state) => state.projects.list);
   /* eslint no-underscore-dangle: 0 */
   const filteredP = project.filter((x) => x._id === params.pId).map((p) => p);
-
   return (
     <div className="container mx-auto px-8 py-6">
       {filteredP.map((p) => {
