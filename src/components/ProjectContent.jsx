@@ -11,7 +11,7 @@ function ProjectContent({ title, type, address, date, pic, skills, isOpen }) {
         />
         <div className="flex flex-col">
           <h1 className="text-center sm:text-center md:text-left lg:text-left text-2xl text-blue-600 py-3 font-normal">
-            Name: {title}
+            {title.toUpperCase()}
           </h1>
           <span className="text-blue-600 text-center sm:text-center md:text-left lg:text-left">
             Deadline: {date.slice(0, 10)}
