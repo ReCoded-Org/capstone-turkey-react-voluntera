@@ -16,7 +16,7 @@ exports[`render the Userprofile page 1`] = `
         <h1
           className="text-blue-500 text-2xl py-2 lg:text-3xl"
         >
-          Tom Holland
+           
         </h1>
         <div
           className="text-md"
@@ -25,37 +25,33 @@ exports[`render the Userprofile page 1`] = `
             <strong>
               Username: 
             </strong>
-             username34
+             
           </p>
           <p>
             <strong>
               User Type: 
             </strong>
-             Volunteer / Organisation
+             
           </p>
           <p>
             <strong>
               Date of Birth: 
             </strong>
-             2022-03-10
-          </p>
-          <p>
-            <strong>
-              age: 
-            </strong>
-             25
+             
+            05/04/2022
           </p>
           <p>
             <strong>
               email: 
             </strong>
-             user@gmail.com
+             
           </p>
           <p>
             <strong>
               phone: 
             </strong>
-             +90 (321) 123456
+             
+            N/A
           </p>
         </div>
         <p
@@ -64,28 +60,14 @@ exports[`render the Userprofile page 1`] = `
           <strong
             className="text-lg text-blue-500 mr-2"
           >
-            SKILLS: 
+            <div>
+              Description:
+               
+              <span
+                className="text-slate-500 text-md font-normal"
+              />
+            </div>
           </strong>
-          <span
-            className="border-r-2 border-r-blue-400 pr-2 px-1"
-          >
-            Problem Soving
-          </span>
-          <span
-            className="border-r-2 border-r-blue-400 pr-2 px-1"
-          >
-            Internet Knowledge
-          </span>
-          <span
-            className="border-r-2 border-r-blue-400 pr-2 px-1"
-          >
-            Teamwork
-          </span>
-          <span
-            className="border-r-2 border-r-blue-400 pr-2 px-1"
-          >
-            Organising Management
-          </span>
         </p>
       </div>
       <div
@@ -94,12 +76,143 @@ exports[`render the Userprofile page 1`] = `
         <img
           alt="somethine"
           className="rounded-full"
-          src="https://www.pngitem.com/pimgs/m/75-758282_walter-circle-person-photo-in-circle-hd-png.png"
+          src="https://i.pinimg.com/280x280_RS/2e/45/66/2e4566fd829bcf9eb11ccdb5f252b02f.jpg"
         />
       </div>
     </div>
     <div
-      className=" px-2 py-2"
+      className="hidden"
+    >
+      <div
+        className="relative p-4 w-full max-w-2xl h-full md:h-auto"
+      >
+        <div
+          className="relative bg-white rounded-lg shadow "
+        >
+          <div
+            className="flex justify-between items-start p-5 rounded-t border-b "
+          >
+            <h3
+              className="text-xl font-semibold text-gray-900 lg:text-2xl "
+            >
+              Add new project
+            </h3>
+            <div
+              className="Toastify"
+            />
+          </div>
+          <div
+            className="p-6 space-y-6"
+          >
+            <form
+              onSubmit={[Function]}
+            >
+              <label
+                className="mb-3 w-full group 300"
+                htmlFor="title"
+              >
+                Title
+                <input
+                  className=" py-1 outline-none px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300  200"
+                  name="title"
+                  onChange={[Function]}
+                  placeholder="title "
+                  required={true}
+                  type="text"
+                />
+              </label>
+              <div
+                className="grid xl:grid-cols-2 xl:gap-6 mb-4 mt-5"
+              >
+                <label
+                  className="mb-1 w-full group 300"
+                  htmlFor="type"
+                >
+                  Type
+                  <input
+                    className=" py-1 outline-none px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 200 "
+                    name="type"
+                    onChange={[Function]}
+                    placeholder=" part-time"
+                    required={true}
+                    type="text"
+                  />
+                </label>
+                <label
+                  className="mb-1 w-full flex items-center gap-3 300 "
+                  htmlFor="isOpen"
+                >
+                  Is Open ?
+                  <input
+                    className=" py-1 outline-none px-0 text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 "
+                    name="isOpen"
+                    onChange={[Function]}
+                    placeholder=" "
+                    required={true}
+                    type="checkbox"
+                  />
+                </label>
+              </div>
+              <label
+                className="mb-1 w-full group 300"
+                htmlFor="necessarySkills"
+              >
+                Skills
+                <input
+                  className=" py-1 outline-none px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 "
+                  name="necessarySkills"
+                  onChange={[Function]}
+                  placeholder=""
+                  required={true}
+                  type="text"
+                />
+              </label>
+              <div
+                className="grid xl:grid-cols-2 xl:gap-6 mb-6 mt-5"
+              >
+                <label
+                  className="mb-1 w-full group "
+                  htmlFor="address"
+                >
+                  Location
+                  <input
+                    className=" py-1 outline-none px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 "
+                    name="address"
+                    onChange={[Function]}
+                    placeholder="Istanbul/ Turkey"
+                    required={true}
+                    type="text"
+                  />
+                </label>
+                <label
+                  className="mb-1 w-full group  "
+                  htmlFor="date"
+                >
+                  Date
+                  <input
+                    className=" py-1 outline-none px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 "
+                    name="date"
+                    onChange={[Function]}
+                    placeholder=" "
+                    required={true}
+                    type="date"
+                  />
+                </label>
+              </div>
+              <button
+                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
+                onClick={[Function]}
+                type="submit"
+              >
+                Add
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className=" px-2 py-2 text-center"
     >
       <h1
         className="text-blue-500 text-2xl text-center mb-5  pb-2"
@@ -107,152 +220,16 @@ exports[`render the Userprofile page 1`] = `
         Project Assigned
       </h1>
       <div
-        className=" p-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-5 place-items-center items-center"
+        className=" p-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-5 place-items-center items-center justify-center"
+      />
+      <div
+        className="max-w-7xl "
       >
-        <div
-          className="p-6 lg:max-w-sm md:max-w-sm max-w-xs bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+        <span
+          className="text-3xl text-slate-700 flex justify-center"
         >
-          <a
-            href="http://www.w3.org/2000/svg"
-          >
-            <h5
-              className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-            >
-              New technology 2022
-            </h5>
-          </a>
-          <p
-            className="mb-3 font-normal text-gray-700 dark:text-gray-400"
-          >
-             Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
-          </p>
-          <a
-            className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-purple-700 rounded-lg hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800"
-            href="http://www.w3.org/2000/svg"
-          >
-            Read more
-            <svg
-              className="ml-2 -mr-1 w-4 h-4"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clipRule="evenodd"
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                fillRule="evenodd"
-              />
-            </svg>
-          </a>
-        </div>
-        <div
-          className="p-6 lg:max-w-sm md:max-w-sm max-w-xs bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
-        >
-          <a
-            href="http://www.w3.org/2000/svg"
-          >
-            <h5
-              className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-            >
-              New technology 2022
-            </h5>
-          </a>
-          <p
-            className="mb-3 font-normal text-gray-700 dark:text-gray-400"
-          >
-             Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
-          </p>
-          <a
-            className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-purple-700 rounded-lg hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800"
-            href="http://www.w3.org/2000/svg"
-          >
-            Read more
-            <svg
-              className="ml-2 -mr-1 w-4 h-4"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clipRule="evenodd"
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                fillRule="evenodd"
-              />
-            </svg>
-          </a>
-        </div>
-        <div
-          className="p-6 lg:max-w-sm md:max-w-sm max-w-xs bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
-        >
-          <a
-            href="http://www.w3.org/2000/svg"
-          >
-            <h5
-              className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-            >
-              New technology 2022
-            </h5>
-          </a>
-          <p
-            className="mb-3 font-normal text-gray-700 dark:text-gray-400"
-          >
-             Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
-          </p>
-          <a
-            className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-purple-700 rounded-lg hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800"
-            href="http://www.w3.org/2000/svg"
-          >
-            Read more
-            <svg
-              className="ml-2 -mr-1 w-4 h-4"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clipRule="evenodd"
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                fillRule="evenodd"
-              />
-            </svg>
-          </a>
-        </div>
-        <div
-          className="p-6 lg:max-w-sm md:max-w-sm max-w-xs bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
-        >
-          <a
-            href="http://www.w3.org/2000/svg"
-          >
-            <h5
-              className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-            >
-              New technology 2022
-            </h5>
-          </a>
-          <p
-            className="mb-3 font-normal text-gray-700 dark:text-gray-400"
-          >
-             Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
-          </p>
-          <a
-            className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-purple-700 rounded-lg hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800"
-            href="http://www.w3.org/2000/svg"
-          >
-            Read more
-            <svg
-              className="ml-2 -mr-1 w-4 h-4"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clipRule="evenodd"
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                fillRule="evenodd"
-              />
-            </svg>
-          </a>
-        </div>
+          You have no projects assigned !
+        </span>
       </div>
     </div>
   </div>
