@@ -42,7 +42,7 @@ export default function Home({ word }) {
             </div>
           ) : (
             projects?.list
-              ?.filter(function (val) {
+              ?.filter((val) => {
                 if (word === '') {
                   return val;
                 }

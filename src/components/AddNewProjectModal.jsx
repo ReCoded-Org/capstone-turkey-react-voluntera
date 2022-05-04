@@ -29,7 +29,7 @@ export default function AddNewProjectModal() {
     e.preventDefault();
     dispatch(addProject(formData));
   };
-  console.log('modal', formData);
+  // console.log('modal', formData);
   return (
     <div className="relative p-4 w-full max-w-2xl h-full md:h-auto">
       <div className="relative bg-white rounded-lg shadow ">

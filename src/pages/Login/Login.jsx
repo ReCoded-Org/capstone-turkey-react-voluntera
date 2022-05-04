@@ -40,7 +40,6 @@ export default function Login() {
     },
     validate,
     onSubmit: (values) => {
-      console.log(values);
       dispatch(signInUser(values));
       if (user) {
         navigate(USER_ROUTE);
