@@ -23,7 +23,7 @@ function Footer() {
                 alt="logo"
               />
               <span className="text-2xl text-white font-semibold">
-                Valuntera
+                Voluntera
               </span>
             </div>
           </Link>

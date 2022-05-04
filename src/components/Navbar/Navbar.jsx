@@ -46,7 +46,7 @@ function Navbar({ sendTerm }) {
                       alt="valuntera"
                     />
                     <span className="text-2xl text-white font-semibold md:text-xl">
-                      Valuntera
+                      Voluntera
                     </span>
                   </div>
                 </Link>
