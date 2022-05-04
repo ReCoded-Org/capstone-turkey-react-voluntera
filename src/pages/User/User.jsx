@@ -6,7 +6,7 @@ import UsersProjectsCard from '../../components/UsersProjectsCard';
 import AddNewProjectModal from '../../components/AddNewProjectModal';
 
 function User() {
-  const user = useSelector((state) => state.user.user);
+  const user = useSelector((state) => state.user);
   const [isClick, setisClick] = useState(false);
 
   return (
@@ -16,46 +16,46 @@ function User() {
         <div className=" py-2 pl-2 grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 grid-cols-1 gap-4 items-center place-items-center ">
           <div className="col-span-2 order-1 sm:order-none px-5">
             <h1 className="text-blue-500 text-2xl py-2 lg:text-3xl">
-              {user?.firstName} {user?.lastName}
+              {user?.user?.firstName} {user?.user?.lastName}
             </h1>
             <div className="text-md">
               <p>
-                <strong>Username: </strong> {user?.username}
+                <strong>Username: </strong> {user?.user?.username}
               </p>
               <p>
-                <strong>User Type: </strong> {user?.userType}
+                <strong>User Type: </strong> {user?.user?.userType}
               </p>
               <p>
                 <strong>Date of Birth: </strong>{' '}
-                {moment(user?.birthDate).utc().format('MM/DD/YYYY')}
+                {moment(user?.user?.birthDate).utc().format('MM/DD/YYYY')}
               </p>
               <p>
-                <strong>email: </strong> {user?.email}
+                <strong>email: </strong> {user?.user?.email}
               </p>
               <p>
-                <strong>phone: </strong> {user?.phone || 'N/A'}
+                <strong>phone: </strong> {user?.user?.phone || 'N/A'}
               </p>
-              {user?.address && (
+              {user?.user?.address && (
                 <p>
-                  <strong>address: </strong> {user?.address || 'N/A'}
+                  <strong>address: </strong> {user?.user?.address || 'N/A'}
                 </p>
               )}
             </div>
             {/* skills */}
             <p className="mt-3 flex flex-wrap gap-1">
               <strong className="text-lg text-blue-500 mr-2">
-                {user?.skills ? (
+                {user?.user?.skills ? (
                   'SKILLS :'
                 ) : (
                   <div>
                     Description:{' '}
                     <span className="text-slate-500 text-md font-normal">
-                      {user?.description}
+                      {user?.user?.description}
                     </span>
                   </div>
                 )}
               </strong>
-              {user?.skills?.map((skill) => {
+              {user?.user?.skills?.map((skill) => {
                 return (
                   <span
                     key={skill}
@@ -76,7 +76,7 @@ function User() {
           </div>
         </div>
         {/* add project */}
-        {user?.userType === 'Organization' && (
+        {user?.user?.userType === 'Organization' && (
           <button
             type="button"
             className=" px-4 py-1 border bg-purple-400 w-36 ml-7"
@@ -94,12 +94,12 @@ function User() {
             Project Assigned
           </h1>
           <div className=" p-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-5 place-items-center items-center justify-center">
-            {user?.projects?.map((card) => {
+            {user?.user?.projects?.map((card) => {
               return <UsersProjectsCard key={card} userdata={card} />;
             })}
           </div>
           <div className="max-w-7xl ">
-            {!user?.projects?.length > 0 ? (
+            {!user?.user?.projects?.length > 0 ? (
               <span className="text-3xl text-slate-700 flex justify-center">
                 You have no projects assigned !
               </span>
