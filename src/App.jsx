@@ -51,6 +51,7 @@ function App() {
             element={user ? <User /> : <Home word={term} />}
           />
           <Route path={SIGN_UP_ROUTE} element={<SignUp />} />
+          <Route path={USER_ROUTE} element={<User />} />
           <Route path={POSTS_ROUTE} element={<Posts />} />
           <Route path={FAQS_ROUTE} element={<FAQ />} />
         </Routes>
