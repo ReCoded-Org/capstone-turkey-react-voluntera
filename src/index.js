@@ -6,6 +6,7 @@ import './index.css';
 import store from './redux/store/store';
 import 'flowbite';
 import 'remixicon/fonts/remixicon.css';
+import 'react-toastify/dist/ReactToastify.css';
 import App from './App';
 
 ReactDOM.render(

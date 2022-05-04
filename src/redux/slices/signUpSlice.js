@@ -19,15 +19,14 @@ const signUpSlice = createSlice({
   },
   extraReducers: {
     [signUpUser.pending]: (state) => {
-      state.status = 'signing up please wait';
+      state.status = 'signing';
     },
-    [signUpUser.fulfilled]: (state, { payload }) => {
-      state.status = payload.status;
-      state.message = payload.message;
+    [signUpUser.fulfilled]: (state) => {
+      state.status = 'signedup';
     },
     [signUpUser.rejected]: (state, { payload }) => {
-      state.status = payload.status;
-      state.error = payload.message;
+      state.status = 'rejected';
+      state.error = payload;
     },
   },
 });

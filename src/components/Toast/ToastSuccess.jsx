@@ -1,11 +1,16 @@
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 
 export default function ToastSuccess({ submitted, message }) {
+  const [submit, setSubmit] = useState(submitted);
+  setTimeout(() => {
+    setSubmit(false);
+  }, 4000);
   return (
     <div
       id="toast-success"
       className={` ${
-        submitted ? 'flex absolute top-20 right-10 ' : 'hidden'
+        submit ? 'flex absolute bottom-0 right-10 ' : 'hidden'
       } items-center border border-green-300 w-full max-w-lg p-4 mb-4 text-gray-600 bg-green-100 rounded-lg shadow `}
       role="alert"
     >

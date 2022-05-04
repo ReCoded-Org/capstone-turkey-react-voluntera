@@ -1,6 +1,45 @@
 import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+// import useFetch from '../hooks/fetchHook';
 
-function ProjectContent({ title, type, address, date, pic, skills, isOpen }) {
+import { LOGIN_ROUTE } from '../routes';
+
+function ProjectContent({
+  title,
+  type,
+  address,
+  date,
+  pic,
+  skills,
+  isOpen,
+  id,
+}) {
+  /* eslint no-underscore-dangle: 0 */
+  const userId = useSelector((state) => state.user?.user?._id);
+  const user = useSelector((state) => state.user?.user);
+  const navigate = useNavigate();
+  const body = {
+    applicant: userId,
+    date: '2022-02-09T18:11:03.564+00:00',
+    status: false,
+  };
+  const handleApply = async () => {
+    if (!user) {
+      navigate(LOGIN_ROUTE);
+    } else {
+      await fetch(
+        `https://voluntera.herokuapp.com/api/projects/${id}/applications`,
+        {
+          method: 'post',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(body),
+        },
+      ).catch((err) => err);
+    }
+  };
   return (
     <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8  p-3">
       <div className="flex flex-col p-3">
@@ -28,6 +67,7 @@ function ProjectContent({ title, type, address, date, pic, skills, isOpen }) {
               <button
                 type="button"
                 className="w-28 h-10 border bg-purple-500 px-8 rounded-full flex items-center justify-center text-white text-sm font-bold hover:text-purple-500 hover:bg-purple-300 hover:border hover:border-purple-500"
+                onClick={handleApply}
               >
                 Apply
               </button>
@@ -57,6 +97,7 @@ ProjectContent.propTypes = {
   pic: PropTypes.string,
   skills: PropTypes.instanceOf(Array),
   isOpen: PropTypes.bool,
+  id: PropTypes.string,
 };
 
 ProjectContent.defaultProps = {
@@ -67,5 +108,6 @@ ProjectContent.defaultProps = {
   pic: 'https://retaintechnologies.com/wp-content/uploads/2020/04/Project-Management-Mantenimiento-1.jpg',
   skills: [],
   isOpen: null,
+  id: '',
 };
 export default ProjectContent;
