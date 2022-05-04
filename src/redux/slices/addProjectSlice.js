@@ -18,13 +18,11 @@ const addProjectSlice = createSlice({
     [addProject.pending]: (state) => {
       state.status = 'adding';
     },
-    [addProject.fulfilled]: (state, { payload }) => {
+    [addProject.fulfilled]: (state) => {
       state.status = 'added';
-      state.message = payload.message;
     },
-    [addProject.rejected]: (state, { payload }) => {
-      state.status = payload.status;
-      state.error = payload.message;
+    [addProject.rejected]: (state) => {
+      state.status = 'failed';
     },
   },
 });

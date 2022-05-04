@@ -1,10 +1,13 @@
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import moment from 'moment';
 
 import UsersProjectsCard from '../../components/UsersProjectsCard';
+import AddNewProjectModal from '../../components/AddNewProjectModal';
 
 function User() {
   const user = useSelector((state) => state.user.user);
+  const [isClick, setisClick] = useState(false);
 
   return (
     <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -71,6 +74,19 @@ function User() {
               className="rounded-full"
             />
           </div>
+        </div>
+        {/* add project */}
+        {user?.userType === 'Organization' && (
+          <button
+            type="button"
+            className=" px-4 py-1 border bg-purple-400 w-36 ml-7"
+            onClick={() => setisClick(!isClick)}
+          >
+            Add project
+          </button>
+        )}
+        <div className={isClick ? 'block' : 'hidden'}>
+          <AddNewProjectModal />
         </div>
         {/* projects col */}
         <div className=" px-2 py-2 text-center">

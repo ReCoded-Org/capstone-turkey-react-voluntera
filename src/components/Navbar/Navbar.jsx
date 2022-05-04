@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
-import { Fragment, useState } from 'react';
+import { Fragment } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import classNames from '../../utils';
 import logo from '../../assets/images/logov.png';
@@ -15,20 +16,14 @@ import {
   SIGN_UP_ROUTE,
   USER_ROUTE,
 } from '../../routes';
-import AddProject from '../AddProject';
-import AddNewProjectModal from '../AddNewProjectModal';
 
-function Navbar() {
-  const [opens, setOpen] = useState(false);
+function Navbar({ sendTerm }) {
   const user = useSelector((state) => state.user);
-  // const dispatch = useDispatch();
 
   return (
     <Disclosure as="nav" className="bg-purple-600">
       {({ open }) => (
         <>
-          <AddNewProjectModal />
-          <AddProject opens={opens} />
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center md:absolute sm:absolute lg:hidden">
@@ -93,24 +88,16 @@ function Navbar() {
                     >
                       Blogs
                     </Link>
-                    {user?.user?.userType === 'Organization' && (
-                      <button
-                        type="button"
-                        className="text-white hover:text-purple-900 px-3 py-2 rounded-md text-md font-medium"
-                        data-modal-toggle="defaultModal"
-                        onClick={() => setOpen(true)}
-                      >
-                        Add new project
-                      </button>
-                    )}
                   </div>
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                {/* search input */}
                 <input
                   type="text"
                   className="hidden rounded-full outline-none px-3 w-60 text-lg md:hidden sm:hidden lg:block bg-purple-600 border text-white"
                   placeholder="Search here"
+                  onChange={(e) => sendTerm(e.target.value)}
                 />
 
                 {/* Profile dropdown */}
@@ -232,6 +219,15 @@ function Navbar() {
               >
                 Contact
               </Link>
+              <Link
+                to={POSTS_ROUTE}
+                className={classNames(
+                  'text-white hover:text-purple-900',
+                  'px-3 py-2 rounded-md text-md font-medium',
+                )}
+              >
+                Blog
+              </Link>
               <input
                 type="text"
                 className="block rounded-full outline-none px-3 w-60 text-lg md:block sm:block lg:hidden bg-purple-600 border text-white"
@@ -246,3 +242,10 @@ function Navbar() {
 }
 
 export default Navbar;
+
+Navbar.propTypes = {
+  sendTerm: PropTypes.func,
+};
+Navbar.defaultProps = {
+  sendTerm: () => {},
+};
