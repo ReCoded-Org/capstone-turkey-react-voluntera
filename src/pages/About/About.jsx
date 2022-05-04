@@ -15,7 +15,7 @@ function About() {
           Voluntera
         </h1>
         <p className="md:w-2/5 text-center py-2 text-[#21567e] font-[400] text-2xl  tracking-[-0.5px] leading-[26px] ">
-          Valuntera is a place where volunteers can find their desired
+          Voluntera is a place where volunteers can find their desired
           organization to volunteer as well as companies and organizations can
           promote their projects and events which need volunteers.{' '}
         </p>
