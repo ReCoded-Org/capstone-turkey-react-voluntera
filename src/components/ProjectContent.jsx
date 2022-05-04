@@ -37,7 +37,7 @@ function ProjectContent({
           },
           body: JSON.stringify(body),
         },
-      ).catch((err) => console.log(err));
+      ).catch((err) => err);
     }
   };
   return (
