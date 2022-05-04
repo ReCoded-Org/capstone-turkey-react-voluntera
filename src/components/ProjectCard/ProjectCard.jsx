@@ -1,16 +1,14 @@
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
+
 import { PROJECT_ROUTE } from '../../routes';
+import image from '../../assets/images/project.png';
 
 function ProjectCard({ projectName, field, deadline, id }) {
   const navigate = useNavigate();
   return (
     <div className="max-w-xs bg-white rounded-lg border border-gray-200 shadow-xl ">
-      <img
-        className="rounded-t-lg"
-        src="https://flowbite.com/docs/images/blog/image-1.jpg"
-        alt=""
-      />
+      <img className="rounded-t-lg" src={image} alt="" />
 
       <div className="p-5">
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">

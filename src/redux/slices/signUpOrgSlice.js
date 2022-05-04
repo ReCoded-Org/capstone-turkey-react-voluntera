@@ -23,7 +23,7 @@ const signUpOrgSlice = createSlice({
       state.message = 'signing up please wait';
     },
     [signUpOrg.fulfilled]: (state, { payload }) => {
-      state.status = payload.status;
+      state.status = 'signedup';
       state.message = payload.message;
     },
     [signUpOrg.rejected]: (state, { payload }) => {

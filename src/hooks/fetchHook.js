@@ -7,7 +7,7 @@ const useFetch = async (url, body) => {
     body: JSON.stringify(body),
   });
 
-  return response;
+  return response.json();
 };
 
 export default useFetch;

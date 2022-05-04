@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import { useSelector } from 'react-redux';
 
 import classNames from '../../utils';
 import logo from '../../assets/images/logov.png';
@@ -9,17 +10,25 @@ import {
   ABOUT_ROUTE,
   CONTACT_ROUTE,
   HOME_ROUTE,
-  PROJECT_ROUTE,
+  LOGIN_ROUTE,
+  POSTS_ROUTE,
   SIGN_UP_ROUTE,
+  USER_ROUTE,
 } from '../../routes';
+import AddProject from '../AddProject';
+import AddNewProjectModal from '../AddNewProjectModal';
 
 function Navbar() {
-  const login = false;
+  const [opens, setOpen] = useState(false);
+  const user = useSelector((state) => state.user);
+  // const dispatch = useDispatch();
 
   return (
     <Disclosure as="nav" className="bg-purple-600">
       {({ open }) => (
         <>
+          <AddNewProjectModal />
+          <AddProject opens={opens} />
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center md:absolute sm:absolute lg:hidden">
@@ -76,21 +85,24 @@ function Navbar() {
                       Contact
                     </Link>
                     <Link
-                      to={PROJECT_ROUTE}
+                      to={POSTS_ROUTE}
                       className={classNames(
                         'text-white hover:text-purple-900',
                         'px-3 py-2 rounded-md text-md font-medium',
                       )}
                     >
-                      Project
+                      Blogs
                     </Link>
-                    <button
-                      type="button"
-                      className="text-white hover:text-purple-900 px-3 py-2 rounded-md text-md font-medium"
-                      data-modal-toggle="defaultModal"
-                    >
-                      add new project
-                    </button>
+                    {user?.user?.userType === 'Organization' && (
+                      <button
+                        type="button"
+                        className="text-white hover:text-purple-900 px-3 py-2 rounded-md text-md font-medium"
+                        data-modal-toggle="defaultModal"
+                        onClick={() => setOpen(true)}
+                      >
+                        Add new project
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>
@@ -103,26 +115,37 @@ function Navbar() {
 
                 {/* Profile dropdown */}
                 <Menu as="div" className="ml-3 relative">
-                  {login ? (
+                  {user.user ? (
                     <div>
                       <Menu.Button className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                         <span className="sr-only">Open user menu</span>
                         <img
                           className="h-8 w-8 rounded-full"
-                          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                          src="https://i.pinimg.com/280x280_RS/2e/45/66/2e4566fd829bcf9eb11ccdb5f252b02f.jpg"
                           alt=""
                         />
                       </Menu.Button>
                     </div>
                   ) : (
-                    <Link to={SIGN_UP_ROUTE}>
-                      <button
-                        type="button"
-                        className="text-white px-5 py-2 bg-purple-900 rounded-md flex items-center  font-semibold hover:text-white hover:bg-purple-800"
-                      >
-                        Login
-                      </button>
-                    </Link>
+                    <div className="flex rounded-md shadow-sm" role="group">
+                      <Link to={SIGN_UP_ROUTE}>
+                        <button
+                          type="button"
+                          className="text-white px-5 py-2 rounded-l bg-purple-900  flex items-center  font-semibold hover:text-white hover:bg-purple-800"
+                        >
+                          Signup
+                        </button>
+                      </Link>
+                      <div className="border-purple-500 border" />
+                      <Link to={LOGIN_ROUTE}>
+                        <button
+                          type="button"
+                          className="text-white px-5 rounded-r py-2 bg-purple-900  flex items-center  font-semibold hover:text-white hover:bg-purple-800"
+                        >
+                          Login
+                        </button>
+                      </Link>
+                    </div>
                   )}
                   <Transition
                     as={Fragment}
@@ -136,41 +159,41 @@ function Navbar() {
                     <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="www.dotcome.com"
+                          <Link
+                            to={USER_ROUTE}
                             className={classNames(
                               active ? 'bg-gray-100' : '',
                               'block px-4 py-2 text-sm text-gray-700',
                             )}
                           >
                             Your Profile
-                          </a>
+                          </Link>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="www.dotcome.com"
+                          <Link
+                            to="/user/settings"
                             className={classNames(
                               active ? 'bg-gray-100' : '',
                               'block px-4 py-2 text-sm text-gray-700',
                             )}
                           >
                             Settings
-                          </a>
+                          </Link>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="www.dotcome.com"
+                          <button
+                            type="button"
                             className={classNames(
                               active ? 'bg-gray-100' : '',
                               'block px-4 py-2 text-sm text-gray-700',
                             )}
                           >
                             Sign out
-                          </a>
+                          </button>
                         )}
                       </Menu.Item>
                     </Menu.Items>
